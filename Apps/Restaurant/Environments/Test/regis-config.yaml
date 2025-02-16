@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: redis-secret
+  namespace: restaurant-test
+type: Opaque
+data:
+  redis-password: dTZKVngwczJTRg== # Base64 de "u6JVx0s2SF"

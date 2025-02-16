@@ -14,6 +14,8 @@ spec:
         architecture: standalone
         auth:
           enabled: true
+          existingSecret: redis-secret
+          existingSecretPasswordKey: redis-password
         resources:
           limits:
             cpu: "500m"
