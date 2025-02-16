@@ -32,7 +32,7 @@ data:
 
   # Provider: postgresql | mysql
   DATABASE_PROVIDER: "postgresql"
-  DATABASE_CONNECTION_URI: "postgresql://root:123456@postgres:5432/evolutionapi?schema=public"
+  DATABASE_CONNECTION_URI: "postgresql://root:123456@postgres-postgresql:5432/evolutionapi?schema=public"
   # Client name for the database connection
   # It is used to separate an API installation from another that uses the same database.
   DATABASE_CONNECTION_CLIENT_NAME: "evolution_exchange"
