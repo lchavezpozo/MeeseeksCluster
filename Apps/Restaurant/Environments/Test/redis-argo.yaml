@@ -14,7 +14,6 @@ spec:
         architecture: standalone
         auth:
           enabled: true
-          password: "u6JVx0s2SF"
         resources:
           limits:
             cpu: "500m"
