@@ -6,7 +6,6 @@ metadata:
 data:
   N8N_QUEUE_MODE: "redis"
   QUEUE_BULL_REDIS_HOST: "redis-master"
-  QUEUE_BULL_REDIS_PASSWORD: "$(REDIS_PASSWORD)"
   QUEUE_BULL_REDIS_PORT: "6379"
   EXECUTIONS_MODE: "queue"
   N8N_ENCRYPTION_KEY: "super-secret-key"
