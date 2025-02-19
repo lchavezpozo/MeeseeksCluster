@@ -1,0 +1,18 @@
+n8n:
+  queueMode: "redis"
+  redis:
+    host: "redis-master"
+    port: "6379"
+  executionsMode: "queue"
+  encryptionKey: "super-secret-key"
+  basicAuth:
+    active: "true"
+    user: "admin"
+    password: "password"
+  database:
+    type: "postgresdb"
+    host: "postgres-postgresql"
+    name: "n8n"
+    user: "root"
+    password: "123456"
+  logLevel: "debug"
