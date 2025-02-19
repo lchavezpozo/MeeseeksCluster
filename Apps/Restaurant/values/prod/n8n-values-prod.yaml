@@ -1,7 +1,7 @@
 n8n:
   queueMode: "redis"
   redis:
-    host: "restaurant-dev-redis-master"
+    host: "restaurant-prod-redis-master"
     port: "6379"
   executionsMode: "queue"
   encryptionKey: "super-secret-key"
