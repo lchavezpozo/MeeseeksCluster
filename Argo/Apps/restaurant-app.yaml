@@ -4,32 +4,36 @@ metadata:
   name: restaurant
   namespace: argocd
 spec:
-    generators:
+  generators:
     - list:
         elements:
           - env: dev
             namespace: restaurant-dev
-            valuesFiles:
-              - n8n-values-dev.yaml
+            valuesFile:
+              - values/dev/n8n-values-dev.yaml
+              - values/dev/postgres-values-dev.yaml
+              - values/dev/redis-values-dev.yaml
           - env: prod
             namespace: restaurant-prod
-            valuesFiles:
-              - n8n-values-prod.yaml
-    template:
-      metadata:
-        name: my-app-{{env}}
-      spec: 
-        project: default
-        source:
-          repoURL: "https://github.com/lchavezpozo/MeeseeksCluster"
-          path: Apps/Restaurant
-          targetRevision: main
-        destination:
-          server: https://kubernetes.default.svc
-          namespace: "{{namespace}}"
-        syncPolicy:
-          automated:
-            prune: true
-            selfHeal: true
-        namespaceResource:
-          create: true
+              - values/prod/n8n-values-prod.yaml
+              - values/prod/postgres-values-prod.yaml
+              - values/prod/redis-values-prod.yaml
+  template:
+    metadata:
+      name: Restaurant-{{env}}
+    spec:
+      project: default
+      source:
+        repoURL: "https://github.com/lchavezpozo/MeeseeksCluster"
+        path: Apps/restaurant
+        targetRevision: main
+        helm:
+          valueFiles:
+            - "{{valuesFile}}"
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: "{{namespace}}"
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
