@@ -9,18 +9,11 @@ spec:
         elements:
           - env: dev
             namespace: restaurant-dev
-            valuesFile:
-              - values/dev/n8n-values-dev.yaml
-              - values/dev/postgres-values-dev.yaml
-              - values/dev/redis-values-dev.yaml
           - env: prod
             namespace: restaurant-prod
-              - values/prod/n8n-values-prod.yaml
-              - values/prod/postgres-values-prod.yaml
-              - values/prod/redis-values-prod.yaml
   template:
     metadata:
-      name: Restaurant-{{env}}
+      name: restaurant-{{env}}
     spec:
       project: default
       source:
@@ -29,7 +22,9 @@ spec:
         targetRevision: main
         helm:
           valueFiles:
-            - "{{valuesFile}}"
+            - "values/{{env}}/n8n-values-{{env}}.yaml"
+            - "values/{{env}}/postgres-values-{{env}}.yaml"
+            - "values/{{env}}/redis-values-{{env}}.yaml"
       destination:
         server: https://kubernetes.default.svc
         namespace: "{{namespace}}"
