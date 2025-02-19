@@ -18,7 +18,7 @@ spec:
       project: default
       source:
         repoURL: "https://github.com/lchavezpozo/MeeseeksCluster"
-        path: Apps/restaurant
+        path: Apps/Restaurant
         targetRevision: main
         helm:
           valueFiles:
