@@ -1,7 +1,7 @@
 n8n:
   queueMode: "redis"
   redis:
-    host: "redis-master"
+    host: "restaurant-dev-redis-master"
     port: "6379"
   executionsMode: "queue"
   encryptionKey: "super-secret-key"
@@ -11,7 +11,7 @@ n8n:
     password: "password"
   database:
     type: "postgresdb"
-    host: "postgres-postgresql"
+    host: "restaurant-dev-postgresql"
     name: "n8n"
     user: "root"
     password: "123456"
