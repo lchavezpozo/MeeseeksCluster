@@ -6,6 +6,7 @@ data:
   N8N_QUEUE_MODE: "{{ .Values.n8n.queueMode }}"
   QUEUE_BULL_REDIS_HOST: "{{ .Values.n8n.redis.host }}"
   QUEUE_BULL_REDIS_PORT: "{{ .Values.n8n.redis.port }}"
+  QUEUE_BULL_REDIS_DB: "{{ .Values.n8n.redis.database }}" 
   EXECUTIONS_MODE: "{{ .Values.n8n.executionsMode }}"
   N8N_ENCRYPTION_KEY: "{{ .Values.n8n.encryptionKey }}"
   N8N_BASIC_AUTH_ACTIVE: "{{ .Values.n8n.basicAuth.active }}"

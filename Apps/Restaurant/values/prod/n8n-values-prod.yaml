@@ -3,6 +3,7 @@ n8n:
   redis:
     host: "restaurant-prod-redis-master"
     port: "6379"
+    database: 0
   executionsMode: "queue"
   encryptionKey: "super-secret-key"
   basicAuth:
