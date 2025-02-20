@@ -1,0 +1,12 @@
+chatwoot:
+  postgresql:
+    enabled: false
+    auth:
+      database: "chatwoot"
+      postgresPassword: "12345"
+      username: "root"
+  redis:
+    enabled: false
+    auth:
+      host: "restaurant-dev-redis-master"
+      password: "u6JVx0s2SF"

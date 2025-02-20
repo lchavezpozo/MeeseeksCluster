@@ -11,3 +11,6 @@ dependencies:
   - name: postgresql
     version: "12.1.6"
     repository: "https://charts.bitnami.com/bitnami"
+  - name: chatwoot
+    version: "latest"
+    repository: "https://chatwoot.github.io/charts"

@@ -6,6 +6,7 @@ global:
       database: n8n
       additionalDatabases:
         - evolutionapi
+        - chatwoot
 
 primary:
   persistence:
