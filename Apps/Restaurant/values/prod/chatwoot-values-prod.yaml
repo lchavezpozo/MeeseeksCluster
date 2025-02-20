@@ -10,3 +10,8 @@ chatwoot:
     auth:
       host: "restaurant-dev-redis-master"
       password: "u6JVx0s2SF"
+  persistence:
+    enabled: true
+    storageClass: "standard"  # Reemplaza si utilizas otro StorageClass
+    accessMode: "ReadWriteOnce"
+    size: 10Gi 
