@@ -7,12 +7,17 @@ chatwoot:
       username: "root"
   redis:
     enabled: true
+    nameOverride: chatwoot-redis
+    port: 6380
     auth:
-      host: "restaurant-dev-redis-master"
-      password: "u6JVx0s2SF"
-    database: 1
-  persistence:
-    enabled: true
-    storageClass: "standard"  # Reemplaza si utilizas otro StorageClass
-    accessMode: "ReadWriteOnce"
-    size: 10Gi 
+        password: redis
+    master:
+        persistence:
+            enabled: false
+    replica:
+        replicaCount: 1
+    # enabled: false
+    # auth:
+    #   host: "restaurant-dev-redis-master"
+    #   password: "u6JVx0s2SF"
+    # database: 1
