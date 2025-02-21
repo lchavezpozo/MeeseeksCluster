@@ -7,10 +7,10 @@ chatwoot:
       username: "root"
   redis:
     enabled: true
-    # auth:
-    #   host: "restaurant-dev-redis-master"
-    #   password: "u6JVx0s2SF"
-    # database: 1
+    auth:
+      host: "restaurant-dev-redis-master"
+      password: "u6JVx0s2SF"
+    database: 1
   persistence:
     enabled: true
     storageClass: "standard"  # Reemplaza si utilizas otro StorageClass
