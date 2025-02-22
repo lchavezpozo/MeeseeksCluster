@@ -18,4 +18,4 @@ data:
   DB_POSTGRESDB_USER: "{{ .Values.n8n.database.user }}"
   DB_POSTGRESDB_PASSWORD: "{{ .Values.n8n.database.password }}"
   N8N_LOG_LEVEL: "{{ .Values.n8n.logLevel }}"
-  WEBHOOK_TUNNEL_URL: "http://n8n-service"
+  WEBHOOK_URL: "http://n8n-service"
