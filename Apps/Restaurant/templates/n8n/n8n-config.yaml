@@ -1,20 +1,20 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: n8n-config
-data:
-  N8N_QUEUE_MODE: "{{ .Values.n8n.queueMode }}"
-  QUEUE_BULL_REDIS_HOST: "{{ .Values.n8n.redis.host }}"
-  QUEUE_BULL_REDIS_PORT: "{{ .Values.n8n.redis.port }}"
-  QUEUE_BULL_REDIS_DB: "{{ .Values.n8n.redis.database }}" 
-  EXECUTIONS_MODE: "{{ .Values.n8n.executionsMode }}"
-  N8N_ENCRYPTION_KEY: "{{ .Values.n8n.encryptionKey }}"
-  N8N_BASIC_AUTH_ACTIVE: "{{ .Values.n8n.basicAuth.active }}"
-  N8N_BASIC_AUTH_USER: "{{ .Values.n8n.basicAuth.user }}"
-  N8N_BASIC_AUTH_PASSWORD: "{{ .Values.n8n.basicAuth.password }}"
-  DB_TYPE: "{{ .Values.n8n.database.type }}"
-  DB_POSTGRESDB_HOST: "{{ .Values.n8n.database.host }}"
-  DB_POSTGRESDB_DATABASE: "{{ .Values.n8n.database.name }}"
-  DB_POSTGRESDB_USER: "{{ .Values.n8n.database.user }}"
-  DB_POSTGRESDB_PASSWORD: "{{ .Values.n8n.database.password }}"
-  N8N_LOG_LEVEL: "{{ .Values.n8n.logLevel }}"
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: n8n-config
+# data:
+#   N8N_QUEUE_MODE: "{{ .Values.n8n.queueMode }}"
+#   QUEUE_BULL_REDIS_HOST: "{{ .Values.n8n.redis.host }}"
+#   QUEUE_BULL_REDIS_PORT: "{{ .Values.n8n.redis.port }}"
+#   QUEUE_BULL_REDIS_DB: "{{ .Values.n8n.redis.database }}" 
+#   EXECUTIONS_MODE: "{{ .Values.n8n.executionsMode }}"
+#   N8N_ENCRYPTION_KEY: "{{ .Values.n8n.encryptionKey }}"
+#   N8N_BASIC_AUTH_ACTIVE: "{{ .Values.n8n.basicAuth.active }}"
+#   N8N_BASIC_AUTH_USER: "{{ .Values.n8n.basicAuth.user }}"
+#   N8N_BASIC_AUTH_PASSWORD: "{{ .Values.n8n.basicAuth.password }}"
+#   DB_TYPE: "{{ .Values.n8n.database.type }}"
+#   DB_POSTGRESDB_HOST: "{{ .Values.n8n.database.host }}"
+#   DB_POSTGRESDB_DATABASE: "{{ .Values.n8n.database.name }}"
+#   DB_POSTGRESDB_USER: "{{ .Values.n8n.database.user }}"
+#   DB_POSTGRESDB_PASSWORD: "{{ .Values.n8n.database.password }}"
+#   N8N_LOG_LEVEL: "{{ .Values.n8n.logLevel }}"

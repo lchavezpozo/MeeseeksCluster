@@ -1,19 +1,19 @@
-n8n:
-  queueMode: "redis"
-  redis:
-    host: "restaurant-dev-redis-master"
-    port: "6379"
-    database: 0
-  executionsMode: "queue"
-  encryptionKey: "super-secret-key"
-  basicAuth:
-    active: "true"
-    user: "admin"
-    password: "password"
-  database:
-    type: "postgresdb"
-    host: "restaurant-dev-postgresql"
-    name: "n8n"
-    user: "root"
-    password: "123456"
-  logLevel: "debug"
+# n8n:
+#   queueMode: "redis"
+#   redis:
+#     host: "restaurant-dev-redis-master"
+#     port: "6379"
+#     database: 0
+#   executionsMode: "queue"
+#   encryptionKey: "super-secret-key"
+#   basicAuth:
+#     active: "true"
+#     user: "admin"
+#     password: "password"
+#   database:
+#     type: "postgresdb"
+#     host: "restaurant-dev-postgresql"
+#     name: "n8n"
+#     user: "root"
+#     password: "123456"
+#   logLevel: "debug"

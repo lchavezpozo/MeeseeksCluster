@@ -1,24 +1,19 @@
-redis:
-  architecture: standalone
-  auth:
-    enabled: true
-    existingSecret: redis-secret
-    existingSecretPasswordKey: redis-password
-  port: 6380  # 🔥 Asegurar que use 6380 en lugar de 6379
-  master:
-    count: 1
-    service:
-      port: 6380  # 🔥 Puerto correcto en el servicio del master
-  replica:
-    replicaCount: 1
-    service:
-      port: 6380  # Número de réplicas (sin contar el master)
-  master:
-    count: 1  # Número de instancias del master
-  resources:
-    limits:
-      cpu: "500m"
-      memory: "512Mi"
-    requests:
-      cpu: "250m"
-      memory: "256Mi"
+# redis:
+#   architecture: standalone
+#   auth:
+#     enabled: true
+#     existingSecret: redis-secret
+#     existingSecretPasswordKey: redis-password
+#   master:
+#     count: 1
+#   replica:
+#     replicaCount: 1
+#   master:
+#     count: 1 
+#   resources:
+#     limits:
+#       cpu: "500m"
+#       memory: "512Mi"
+#     requests:
+#       cpu: "250m"
+#       memory: "256Mi"

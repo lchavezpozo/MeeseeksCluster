@@ -1,39 +1,39 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: evolution-api
-  labels:
-    app: evolution-api
-spec:
-  replicas: 1  # Ajusta según necesidad
-  selector:
-    matchLabels:
-      app: evolution-api
-  template:
-    metadata:
-      labels:
-        app: evolution-api
-    spec:
-      containers:
-      - name: evolution-api
-        image: atendai/evolution-api:v2.2.0
-        ports:
-        - containerPort: 8080
-        envFrom:
-        - configMapRef:
-            name: evolution-api-config
-        volumeMounts:
-        - name: evolution-data
-          mountPath: /evolution/instances
-        resources:
-          requests:
-            cpu: "500m"
-            memory: "512Mi"
-          limits:
-            cpu: "2"
-            memory: "2Gi"
-      restartPolicy: Always
-      volumes:
-      - name: evolution-data
-        persistentVolumeClaim:
-          claimName: evolution-pvc
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: evolution-api
+#   labels:
+#     app: evolution-api
+# spec:
+#   replicas: 1  # Ajusta según necesidad
+#   selector:
+#     matchLabels:
+#       app: evolution-api
+#   template:
+#     metadata:
+#       labels:
+#         app: evolution-api
+#     spec:
+#       containers:
+#       - name: evolution-api
+#         image: atendai/evolution-api:v2.2.0
+#         ports:
+#         - containerPort: 8080
+#         envFrom:
+#         - configMapRef:
+#             name: evolution-api-config
+#         volumeMounts:
+#         - name: evolution-data
+#           mountPath: /evolution/instances
+#         resources:
+#           requests:
+#             cpu: "500m"
+#             memory: "512Mi"
+#           limits:
+#             cpu: "2"
+#             memory: "2Gi"
+#       restartPolicy: Always
+#       volumes:
+#       - name: evolution-data
+#         persistentVolumeClaim:
+#           claimName: evolution-pvc
