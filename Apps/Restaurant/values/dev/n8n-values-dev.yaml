@@ -5,7 +5,7 @@ n8n:
     port: "6379"
     database: 0
   executionsMode: "queue"
-  encryptionKey: "super-secret-key"
+  encryptionKey: "gQ2Fbbau8nvVkkFgzYM3Q8GOG6JyUkAN"
   basicAuth:
     active: "true"
     user: "admin"

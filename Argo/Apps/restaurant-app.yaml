@@ -26,7 +26,6 @@ spec:
             - "values/{{env}}/postgres-values-{{env}}.yaml"
             - "values/{{env}}/redis-values-{{env}}.yaml"
             - "values/{{env}}/evolution-values-{{env}}.yaml"
-            - "values/{{env}}/chatwoot-values-{{env}}.yaml"
       destination:
         server: https://kubernetes.default.svc
         namespace: "{{namespace}}"
