@@ -9,8 +9,8 @@ spec:
         elements:
           - env: dev
             namespace: restaurant-dev
-          # - env: prod
-          #   namespace: restaurant-prod
+          - env: prod
+            namespace: restaurant-prod
   template:
     metadata:
       name: restaurant-{{env}}

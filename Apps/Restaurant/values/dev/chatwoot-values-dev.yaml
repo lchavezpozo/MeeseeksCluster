@@ -7,6 +7,8 @@ chatwoot:
       username: "root"
   redis:
     enabled: true
+    auth:
+        password: redis
     master:
         persistence:
             enabled: true
