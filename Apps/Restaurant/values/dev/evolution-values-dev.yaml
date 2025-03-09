@@ -1,3 +1,5 @@
 evolution:
   database:
     conectionUri: "postgresql://root:123456@restaurant-dev-postgresql:5432/evolutionapi?schema=public"
+  data:
+    serverUrl: "http://evolution-api-service.restaurant-dev.svc.cluster.local:8080"

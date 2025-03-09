@@ -7,7 +7,7 @@ data:
   SERVER_TYPE: "http"
   SERVER_PORT: "8080"
   # Server URL - Set your application url
-  SERVER_URL: "http://evolution-api-service"
+  SERVER_URL: "{{ .Values.evolution.data.serverUrl }}"
 
   SENTRY_DSN: ""
 
