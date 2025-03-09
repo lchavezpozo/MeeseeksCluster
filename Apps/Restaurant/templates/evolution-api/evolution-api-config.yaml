@@ -197,7 +197,7 @@ data:
   TYPEBOT_API_VERSION: "latest"
 
   # Chatwoot - Environment variables
-  CHATWOOT_ENABLED: "false"
+  CHATWOOT_ENABLED: "true"
   # If you leave this option as false, when deleting the message for everyone on WhatsApp, it will not be deleted on Chatwoot.
   CHATWOOT_MESSAGE_READ: "true"
   # If you leave this option as true, when sending a message in Chatwoot, the client's last message will be marked as read on WhatsApp.
@@ -205,7 +205,7 @@ data:
   # If you leave this option as true, a contact will be created on Chatwoot to provide the QR Code and update messages about the instance.
   CHATWOOT_BOT_CONTACT: "true"
   # This db connection is used to import messages from whatsapp to chatwoot database
-  CHATWOOT_IMPORT_DATABASE_CONNECTION_URI: "postgresql://user:passwprd@host:5432/chatwoot?sslmode=disable"
+  CHATWOOT_IMPORT_DATABASE_CONNECTION_URI: "postgresql://postgres:chatwoot-postgres-password@chatwoot-chatwoot-postgresql.chatwoot.svc.cluster.local:5432/chatwoot?sslmode=disable"
   CHATWOOT_IMPORT_PLACEHOLDER_MEDIA_MESSAGE: "true"
 
   # OpenAI - Environment variables

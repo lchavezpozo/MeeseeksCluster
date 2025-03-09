@@ -1,0 +1,57 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: chatwoot
+  namespace: argocd
+spec:
+  project: default
+  source:
+    chart: chatwoot
+    repoURL: https://chatwoot.github.io/charts
+    targetRevision: 1.1.20
+    helm:
+      values: |
+        ingress:
+          enabled: true
+          annotations:
+            kubernetes.io/ingress.class: nginx
+          hosts:
+            - host: chatwoot.agentesmart.com
+              paths:
+                - path: /
+                  pathType: ImplementationSpecific
+                  backend:
+                    service:
+                      name: chatwoot
+                      port:
+                        number: 3000
+          tls:
+            enabled: true
+            secretName: chatwoot-tls
+        web:
+          service:
+            type: ClusterIP
+            port: 3000
+        postgresql:
+          enabled: true
+          auth:
+            postgresPassword: "chatwoot-postgres-password"
+            password: "chatwoot-password"
+        redis:
+          enabled: true
+          auth:
+            password: "chatwoot-redis-password"
+        env:
+          existingSecret: chatwoot-secret
+          config:
+            RAILS_ENV: "production"
+            INSTALLATION_NAME: "Chatwoot"
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: chatwoot
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
