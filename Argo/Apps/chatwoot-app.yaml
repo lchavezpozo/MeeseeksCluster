@@ -26,8 +26,7 @@ spec:
                       port:
                         number: 3000
           tls:
-            enabled: true
-            hosts:
+            - hosts:
               - chatwoot.agentesmart.com
             secretName: chatwoot-tls
         web:
