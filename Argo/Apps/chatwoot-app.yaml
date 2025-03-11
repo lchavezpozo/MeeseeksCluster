@@ -26,9 +26,9 @@ spec:
                       port:
                         number: 3000
           tls:
-            - hosts:
-              - chatwoot.agentesmart.com
-              secretName: chatwoot-tls
+            - secretName: chatwoot-tls
+              hosts:
+                - chatwoot.agentesmart.com
         web:
           service:
             type: ClusterIP
