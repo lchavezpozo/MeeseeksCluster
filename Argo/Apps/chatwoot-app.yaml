@@ -27,7 +27,7 @@ spec:
                         number: 3000
           tls:
             - hosts:
-                - chatwoot.agentesmart.com
+                - "chatwoot.agentesmart.com"
               secretName: chatwoot-tls
         web:
           service:
