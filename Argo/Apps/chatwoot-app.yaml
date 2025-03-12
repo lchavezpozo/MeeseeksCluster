@@ -15,6 +15,7 @@ spec:
           enabled: true
           annotations:
             kubernetes.io/ingress.class: nginx
+            external-dns.alpha.kubernetes.io/cloudflare-proxied: "true" 
           hosts:
             - host: chatwoot.agentesmart.com
               paths:
@@ -25,6 +26,10 @@ spec:
                       name: chatwoot
                       port:
                         number: 3000
+          tls:
+            - hosts:
+                - "chatwoot.agentesmart.com"
+              secretName: chatwoot-tls
         web:
           service:
             type: ClusterIP
