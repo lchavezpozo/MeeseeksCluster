@@ -25,9 +25,6 @@ spec:
                       name: chatwoot
                       port:
                         number: 3000
-          tls:
-            - hosts: []
-              secretName: chatwoot-tls
         web:
           service:
             type: ClusterIP
